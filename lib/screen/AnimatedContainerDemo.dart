@@ -6,14 +6,16 @@ class AnimatedContainerDemo extends StatefulWidget {
     return _AnimatedContainerDemoState();
   }
 }
-  class _AnimatedContainerDemoState extends State<AnimatedContainerDemo>{
-    Alignment _alignment = Alignment.center;
-    double _animatedHeight = 200.0;
-    double _animatedWidth = 400.0;
-    double _iconHeight = 180.0;
-    double _iconWidth = 180.0;
-    Color _animatedColor = Colors.red;
-    bool _isAnimated = false;
+
+class _AnimatedContainerDemoState extends State<AnimatedContainerDemo> {
+  Alignment _alignment = Alignment.center;
+  double _animatedHeight = 200.0;
+  double _animatedWidth = 400.0;
+  double _iconHeight = 180.0;
+  double _iconWidth = 180.0;
+  Color _animatedColor = Colors.red;
+  bool _isAnimated = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,9 +30,10 @@ class AnimatedContainerDemo extends StatefulWidget {
               duration: Duration(seconds: 2),
               width: _animatedWidth,
               height: _animatedHeight,
-              color: Colors.red,
+              color: Colors.redAccent,
               curve: Curves.fastOutSlowIn,
               child: AnimatedContainer(
+                color: Colors.blue,
                 duration: Duration(seconds: 2),
                 curve: Curves.fastOutSlowIn,
                 alignment: Alignment.center,
@@ -69,15 +72,14 @@ class AnimatedContainerDemo extends StatefulWidget {
                     ? _animatedColor = Colors.lightBlue
                     : _animatedColor = Colors.red;
                 _isAnimated ? _iconWidth = 100.0 : _iconWidth = 180.0;
-                _isAnimated ? _iconHeight = 100.0 : _iconHeight = 180.0;
               }),
           icon: Icon(
             Icons.movie_filter,
-            color: Colors.deepPurpleAccent,
+            color: Colors.black,
           ),
           label: Text(
             'Animate',
-            style: TextStyle(color: Colors.deepOrangeAccent),
+            style: TextStyle(color: Colors.black),
           )),
     );
   }

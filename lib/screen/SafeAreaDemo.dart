@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class SafeAreaDemo extends StatefulWidget {
   @override
   State<SafeAreaDemo> createState() {
@@ -13,8 +12,13 @@ class _SafeAreaDemoState extends State<SafeAreaDemo> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Safe Area'),
-      ),
+          title: Container(
+        child: Center(
+          child: Text(
+            'Safe Area',
+          ),
+        ),
+      )),
       body: SafeArea(
         top: true,
         bottom: true,
@@ -34,7 +38,11 @@ class _SafeAreaDemoState extends State<SafeAreaDemo> {
             Container(
               width: MediaQuery.of(context).size.width,
               color: Colors.blue,
-              child: Text('Ladyfist',textAlign: TextAlign.center,style: TextStyle(color: Colors.black),),
+              child: Text(
+                'Ladyfist',
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.black),
+              ),
             )
           ],
         ),

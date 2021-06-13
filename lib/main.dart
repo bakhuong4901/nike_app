@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Khuong Demo',
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -48,19 +47,5 @@ class CatalogScreen extends StatelessWidget {
           },
           itemCount: _listCatalog.length,
         ));
-  }
-}
-
-class SafeAreScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('SafeAre'),
-      ),
-      body: const Center(
-        child: Text('Content SafeAre'),
-      ),
-    );
   }
 }
