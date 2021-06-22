@@ -11,11 +11,11 @@ class MyApp1 extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Training 1',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.cyan,
       ),
-      home:RegisterScreen(),
+      // home:RegisterScreen(),
         // SecureScreen(),
-      // home:loginScreen(),
+      home:loginScreen(),
       //AccountScreen(),
     );
   }
