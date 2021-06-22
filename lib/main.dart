@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Khuong Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.cyan,
       ),
       home: CatalogScreen(),
     );

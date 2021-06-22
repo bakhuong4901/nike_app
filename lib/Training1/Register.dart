@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -15,15 +14,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
       body: Container(
         child: Center(
           child: Image(
-            image: AssetImage('assets/1200px-Man_Utd_FC_.svg.png'),
+            image: AssetImage('Assets/Paris-Saint-Germain-FC-HD-Logo.png'),
           ),
         ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Colors.blue,
-        child: Text('Dang ky'),
       ),
     );
   }

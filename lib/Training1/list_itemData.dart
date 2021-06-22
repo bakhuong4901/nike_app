@@ -1,4 +1,8 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_training_kca/Learn/key.dart';
 import 'package:flutter_training_kca/Training1/list_itemmodel.dart';
+List<ListItem> getListItem() => listItems;
+List<ListItem> getListTeam() => listTeam;
 
 final List<ListItem> listItems = [
   ListItem(
@@ -53,3 +57,42 @@ List<ListItem> listTeam = [
         "https://upload.wikimedia.org/wikipedia/vi/thumb/0/0c/Liverpool_FC.svg/1200px-Liverpool_FC.svg.png",
   ),
 ];
+
+class KycLogic {
+  TextEditingController userNameInputController = TextEditingController();
+  TextEditingController firstNameInputController = TextEditingController();
+  TextEditingController lastNameInputController = TextEditingController();
+  TextEditingController emailInputController = TextEditingController();
+  TextEditingController passwordInputController = TextEditingController();
+  TextEditingController secondPasswordInputController = TextEditingController();
+  String errorAccountConfirmedText = "";
+  PageController pageController = PageController();
+  late UserModel user;
+
+  bool userInformationConfirmed() {
+    String username = userNameInputController.text;
+    String firstName = firstNameInputController.text;
+    String lastName = lastNameInputController.text;
+    if (username.isEmpty || firstName.isEmpty || lastName.isEmpty) {
+      return false;
+    }
+    // user = UserModel.origin(username, firstName, lastName);
+    return true;
+  }
+
+  String accountInformationConfirmed() {
+    String password = passwordInputController.text;
+    String confirmedPassword = secondPasswordInputController.text;
+    String email = emailInputController.text;
+    errorAccountConfirmedText = "";
+    if (password.isEmpty || confirmedPassword.isEmpty || email.isEmpty) {
+      errorAccountConfirmedText = "Please fill all information";
+    } else if (passwordInputController.text !=
+        secondPasswordInputController.text) {
+      errorAccountConfirmedText = "Please fill correct password";
+    }
+    user.email = email;
+    user.password = password;
+    return errorAccountConfirmedText;
+  }
+}

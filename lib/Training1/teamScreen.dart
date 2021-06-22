@@ -23,27 +23,19 @@ class _matchScreenState extends State<matchScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Chọn giải đấu",
+              "Chọn doi yeu thich",
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
             Expanded(
               child: ListView.builder(
-                  itemCount: items.length,
+                  itemCount: teams.length,
                   itemBuilder: (context, index) {
-                    return ListItemWidget(
-                      item: items[index],
-                    );
+                    return ListTeamWidget(team: teams[index]);
                   }),
             ),
           ],
         ),
       ),
-      // body: AnimatedList(
-      //   initialItemCount: teams.length,
-      //   itemBuilder: (context, index, animation) => ListItemWidget(
-      //     item: items[index],
-      //   ),
-      // ),
     );
   }
 }
