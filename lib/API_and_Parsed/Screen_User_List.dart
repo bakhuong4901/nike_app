@@ -33,9 +33,7 @@ class _ScreenUserListState extends State<ScreenUserList> {
             List<Items>? items = snapshot.data;
             return ListView.builder(
               itemCount: items!.length,
-              itemBuilder: (context, int index) => ListTile(
-                title: Text(items[index].full_name),
-              ),
+              itemBuilder: (context, int index) => customlist(items[index]),
             );
           }
           return Center(
