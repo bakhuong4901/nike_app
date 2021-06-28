@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+void main(){
+  runApp(MiiChiSoftDemo());
+}
 
 class MiiChiSoftDemo extends StatefulWidget {
   @override
@@ -92,9 +95,7 @@ class _MiiChiSoftDemoState extends State<MiiChiSoftDemo> {
                 width: double.infinity,
                 height: 50.0,
                 child: ElevatedButton(
-                  onPressed: () {
-                    setState(() {});
-                  },
+                  onPressed: () {},
                   child: Text(
                     'Log In',
                     style: TextStyle(fontSize: 18, color: Colors.white),

@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_training_kca/Training1/Account.dart';
-import 'package:flutter_training_kca/Training1/Register.dart';
-import 'package:flutter_training_kca/Training1/SecureScreen.dart';
-import 'package:flutter_training_kca/Training1/login.dart';
+import 'package:flutter_training_kca/Training1/Page_Screen/login.dart';
 
 class MyApp1 extends StatelessWidget {
   @override
@@ -14,8 +11,8 @@ class MyApp1 extends StatelessWidget {
         primarySwatch: Colors.cyan,
       ),
       // home:RegisterScreen(),
-        // SecureScreen(),
-      home:loginScreen(),
+      // SecureScreen(),
+      home: loginScreen(),
       //AccountScreen(),
     );
   }

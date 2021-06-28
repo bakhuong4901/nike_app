@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'list_itemData.dart';
+import 'logic.dart';
+
 
 class AncestorKycLogic extends InheritedWidget {
   final KycLogic kycLogic;

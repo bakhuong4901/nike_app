@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_training_kca/Training1/Account.dart';
+import 'package:flutter_training_kca/Training1/Logic/kyc_screen.dart';
 
 class loginScreen extends StatefulWidget {
   @override
@@ -33,7 +33,7 @@ class _loginScreenState extends State<loginScreen> {
     return Padding(
       padding: EdgeInsets.fromLTRB(0, 60, 0, 80),
       child: Text(
-        'Welcome',
+        'Chào Mung',
         style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
       ),
     );
@@ -52,7 +52,8 @@ class _loginScreenState extends State<loginScreen> {
           ),
           onPressed: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => AccountScreen()));
+                MaterialPageRoute(builder: (context) =>
+                InheritedKycScreen()));
           },
           style: ElevatedButton.styleFrom(
             primary: Colors.green,
@@ -124,7 +125,7 @@ class _loginScreenState extends State<loginScreen> {
       child: Center(
         child: GestureDetector(
           child: Text(
-            'Sign In',
+            'Đăng Nhập',
             style: TextStyle(
                 fontWeight: FontWeight.bold, color: Colors.black, fontSize: 17),
           ),
