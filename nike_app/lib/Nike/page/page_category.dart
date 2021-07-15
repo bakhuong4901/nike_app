@@ -9,10 +9,23 @@ class PageCategory extends StatefulWidget {
 }
 
 class _PageCategoryState extends State<PageCategory> {
+  final List<String> members = [
+    "Member Access Shop All",
+    "Member Days Calendar",
+    "Members-Only Sale",
+    "Upcoming and Just Dropped",
+    "Member's Spotlight Challenge",
+    "Nike Membership Benefits",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          onPressed: () => Navigator.of(context).pop(),
+          icon: Icon(Icons.arrow_back_ios, color: Colors.black),
+        ),
         title: Text(
           'Shop',
           style: TextStyle(
@@ -20,12 +33,20 @@ class _PageCategoryState extends State<PageCategory> {
         ),
         centerTitle: true,
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(CupertinoIcons.search)),
+          IconButton(
+              onPressed: () {},
+              icon: Icon(
+                CupertinoIcons.search,
+                color: Colors.black,
+              )),
+          SizedBox(
+            width: 30,
+          ),
         ],
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: 30),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
               height: 200,

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nike_app/Nike/Screens/experiences_screen.dart';
 
 class ChosenCityScreen extends StatefulWidget {
   const ChosenCityScreen({Key? key}) : super(key: key);
@@ -22,6 +23,17 @@ class _ChosenCityScreenState extends State<ChosenCityScreen> {
     "Guangzhou",
     "Vietnamese"
   ];
+
+  void _sendDataToSecondScreen(BuildContext context,int index) {
+    String textToSend = cities[index];
+    Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => ExperienceScreen(
+            textCities: textToSend,
+          ),
+        ));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +73,9 @@ class _ChosenCityScreenState extends State<ChosenCityScreen> {
             return Column(
               children: [
                 ListTile(
-                  onTap: (){},
+                  onTap: () {
+                    _sendDataToSecondScreen(context,index);
+                  },
                   leading: Icon(
                     CupertinoIcons.location_solid,
                     color: Colors.black,

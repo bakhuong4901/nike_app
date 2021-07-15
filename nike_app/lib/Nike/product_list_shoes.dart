@@ -1,0 +1,257 @@
+class Product {
+  final String image, title, description, subtitle, name;
+  final double price, size, id;
+
+  Product({
+    required this.id,
+    required this.image,
+    required this.title,
+    required this.name,
+    required this.subtitle,
+    required this.price,
+    required this.description,
+    required this.size,
+  });
+}
+
+class Hobby {
+  final String name, image;
+
+  Hobby({required this.name, required this.image});
+}
+
+List<Hobby> sports = [
+  Hobby(name: 'Running', image: 'Images/run.jpeg'),
+  Hobby(
+      name: 'Gym',
+      image:
+          'Images/gym-logo-template-design-04d583c8ca3558ea0ea21763a57e7ba6_screen.jpeg'),
+  Hobby(name: 'Lifestyle', image: 'Images/g.jpeg'),
+  Hobby(name: 'Racing', image: 'Images/lam.jpeg'),
+  Hobby(
+      name: 'Basketball',
+      image: 'Images/slam-dunk-jump-splash-basketball-player_9245-134.jpeg'),
+  Hobby(
+      name: 'Football',
+      image: 'Images/soccer-football-logo-vector_7888-111.jpeg'),
+  Hobby(
+      name: 'Tennis',
+      image: 'Images/tennis-logo-design-tennis-logo-designs-121456822.jpeg'),
+];
+
+List<Product> products = [
+  Product(
+    id: 1,
+    title: "Coming Soon",
+    name: "Ananas Track 6 Rent",
+    subtitle: "Men'Shoe \n2 Colors",
+    price: 139.95,
+    size: 12,
+    description: dummyText,
+    image: "Images/pro_A6T004_1_1.jpeg",
+  ),
+  Product(
+    id: 2,
+    title: "Coming Soon ",
+    name: "Ananas Track 6 limetd",
+    subtitle: "Men'Shoe",
+    price: 149.5,
+    size: 8,
+    description: dummyText,
+    image: "Images/pro_A6T011_1.jpeg",
+  ),
+  Product(
+    id: 3,
+    title: "Ananas",
+    name: "Ananas Low",
+    subtitle: "Men'Shoe",
+    price: 86.7,
+    size: 10,
+    description: dummyText,
+    image: "Images/pro_ABL2021_1.jpeg",
+  ),
+  Product(
+    id: 4,
+    title: "Ananas",
+    name: "Ananas Low Vintage",
+    subtitle: "Men'Shoe",
+    price: 100,
+    size: 11,
+    description: dummyText,
+    image: "Images/pro_vintas_A61037_1.jpeg",
+  ),
+  Product(
+    id: 5,
+    title: "Ananas",
+    name: "Ananas Low Vintage",
+    subtitle: "Men'Shoe",
+    price: 100,
+    size: 12,
+    description: dummyText,
+    image: "Images/pro_vintas_A61038_1-1.jpeg",
+  ),
+  Product(
+    id: 6,
+    title: "Ananas",
+    name: "Nike Max Low ",
+    subtitle: "Men'Shoe",
+    price: 234,
+    size: 12,
+    description: dummyText,
+    image: "Images/revolution-5-running-shoe-8P3bh3.jpeg",
+  ),
+];
+
+List<Product> productShirt = [
+  Product(
+    id: 1,
+    title: "T-Shirt",
+    name: "Doan Van Hau",
+    subtitle: "Men'Shirt \n2 Colors",
+    price: 139.95,
+    size: 12,
+    description: dummyText,
+    image: "Images/hau.jpeg",
+  ),
+  Product(
+    id: 2,
+    title: "T-Shirt",
+    name: "Kevin De Bryeun",
+    subtitle: "Men'Shirt",
+    price: 149.5,
+    size: 8,
+    description: dummyText,
+    image: "Images/kev.jpeg",
+  ),
+  Product(
+    id: 3,
+    title: "T-Shirt",
+    name: "Sterling Black",
+    subtitle: "Men'Shirt",
+    price: 86.7,
+    size: 10,
+    description: dummyText,
+    image: "Images/screen-0.jpeg",
+  ),
+  Product(
+    id: 4,
+    title: "T-Shirt",
+    name: "Neymar JR",
+    subtitle: "Men'Shirt",
+    price: 100,
+    size: 12,
+    description: dummyText,
+    image: "Images/WALLPAPERS_004.png",
+  ),
+  Product(
+    id: 5,
+    title: "T-Shirt",
+    name: "N'Golo Kante",
+    subtitle: "Men'Shirt",
+    price: 100,
+    size: 11,
+    description: dummyText,
+    image: "Images/screen-2.jpeg",
+  ),
+  Product(
+    id: 6,
+    title: "T-Shirt",
+    name: "Cristiano Ronaldo ",
+    subtitle: "Men'Shirt",
+    price: 234,
+    size: 12,
+    description: dummyText,
+    image: "Images/DnOd_1eWwAAUha5.jpeg",
+  ),
+];
+List<Product> shoesDetails = [
+  Product(
+    id: 1,
+    title: "T-Shirt",
+    name: "Doan Van Hau",
+    subtitle: "Men'Shirt \n2 Colors",
+    price: 139.95,
+    size: 12,
+    description: dummyText,
+    image: "Images/DnOd_1eWwAAUha5.jpeg",
+  ),
+  Product(
+    id: 2,
+    title: "T-Shirt",
+    name: "Kevin De Bryeun",
+    subtitle: "Men'Shirt",
+    price: 149.5,
+    size: 8,
+    description: dummyText,
+    image: "Images/kev.jpeg",
+  ),
+  Product(
+    id: 3,
+    title: "T-Shirt",
+    name: "Sterling Black",
+    subtitle: "Men'Shirt",
+    price: 86.7,
+    size: 10,
+    description: dummyText,
+    image: "Images/screen-0.jpeg",
+  ),
+  Product(
+    id: 4,
+    title: "T-Shirt",
+    name: "Neymar JR",
+    subtitle: "Men'Shirt",
+    price: 100,
+    size: 12,
+    description: dummyText,
+    image: "Images/WALLPAPERS_004.png",
+  ),
+  Product(
+    id: 5,
+    title: "T-Shirt",
+    name: "N'Golo Kante",
+    subtitle: "Men'Shirt",
+    price: 100,
+    size: 11,
+    description: dummyText,
+    image: "Images/screen-2.jpeg",
+  ),
+  Product(
+    id: 6,
+    title: "T-Shirt",
+    name: "Cristiano Ronaldo ",
+    subtitle: "Men'Shirt",
+    price: 234,
+    size: 12,
+    description: dummyText,
+    image: "Images/DnOd_1eWwAAUha5.jpeg",
+  ),
+];
+List<String> sizeShoes = [
+  '1.5',
+  '2',
+  '2.5',
+  '3',
+  '3.5',
+  '4',
+  '4.5',
+  '5',
+  '6',
+  '6.5',
+  '7',
+  '7.5',
+  '8',
+  '8.5',
+  '9',
+  '9.5',
+  '10',
+  '10.5',
+  '11',
+  '11.5',
+  '12.5',
+  '13',
+  '13.5',
+  '14',
+  '14.5',
+  '15',
+];
+String dummyText = "Khuong";

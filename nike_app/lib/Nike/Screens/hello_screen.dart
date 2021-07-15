@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nike_app/Nike/choosen_size/choosengentle_screen.dart';
+import 'package:nike_app/Nike/choosen_size_gen/choosengentle_screen.dart';
 
 class HelloScreen extends StatelessWidget {
   const HelloScreen({Key? key}) : super(key: key);
@@ -29,7 +29,9 @@ class HelloScreen extends StatelessWidget {
               style: TextStyle(color: Colors.blueGrey),
               textAlign: TextAlign.center,
             ),
-            SizedBox(height: 250,),
+            SizedBox(
+              height: 250,
+            ),
             Container(
               child: SizedBox(
                 width: double.infinity,

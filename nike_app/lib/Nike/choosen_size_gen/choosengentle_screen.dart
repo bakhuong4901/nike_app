@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nike_app/Nike/choosen_size/choosen_sized.dart';
+
+import 'choosen_sized.dart';
 
 class ChosenGenScreen extends StatelessWidget {
   const ChosenGenScreen({Key? key}) : super(key: key);

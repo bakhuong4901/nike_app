@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nike_app/Nike/Screens/chosencity_Screen.dart';
-import 'package:nike_app/Nike/page/page_category.dart';
 
 class PageSearch extends StatefulWidget {
   const PageSearch({Key? key}) : super(key: key);
@@ -31,7 +30,9 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> {
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+    BuildContext context,
+  ) {
     return SingleChildScrollView(
       child: Container(
         child: Column(
@@ -91,32 +92,115 @@ class _BodyState extends State<Body> {
               height: 2,
             ),
             Container(
-              height: 200,
-              width: 500,
+              height: 400,
+              width: double.infinity,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('Images/mai.jpeg'),
-                  fit: BoxFit.fitWidth,
-                ),
+                    image: AssetImage('Images/mai.jpeg'), fit: BoxFit.fitWidth),
               ),
               child: Container(
-                alignment: Alignment.centerLeft,
-                padding: EdgeInsets.only(left: 20),
-                child: GestureDetector(
-                  child: Text(
+                alignment: Alignment.center,
+                padding: EdgeInsets.only(left: 5),
+                child: ExpansionTile(
+                  title: Text(
                     'Member Days',
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
-                  onTap: () {},
+                  children: [
+                    ListTile(
+                      title: Text(
+                        'Member Access Shop All',
+                        style: TextStyle(color: Colors.white),
+                      ),
+                      onTap: () {},
+                    ),
+                    Divider(
+                      thickness: 1,
+                      height: 1,
+                      color: Colors.white,
+                    ),
+                    ListTile(
+                      title: Text('Member Day Calendar',
+                          style: TextStyle(color: Colors.white)),
+                      onTap: () {},
+                    ),
+                    Divider(
+                      thickness: 1,
+                      height: 1,
+                      color: Colors.white,
+                    ),
+                    ListTile(
+                      title: Text('Member-Only Sale',
+                          style: TextStyle(color: Colors.white)),
+                      onTap: () {},
+                    ),
+                    Divider(
+                      thickness: 1,
+                      height: 1,
+                      color: Colors.white,
+                    ),
+                    ListTile(
+                      title: Text('Upcoming and Just Dropped',
+                          style: TextStyle(color: Colors.white)),
+                      onTap: () {},
+                    ),
+                    Divider(
+                      thickness: 1,
+                      height: 1,
+                      color: Colors.white,
+                    ),
+                    ListTile(
+                      title: Text('Members Spotlight Challenge',
+                          style: TextStyle(color: Colors.white)),
+                      onTap: () {},
+                    ),
+                    Divider(
+                      thickness: 1,
+                      height: 1,
+                      color: Colors.white,
+                    ),
+                    ListTile(
+                      title: Text('Nike Membership Benefits',
+                          style: TextStyle(color: Colors.white)),
+                      onTap: () {},
+                    ),
+                  ],
                 ),
               ),
             ),
+            // Container(
+            //   height: 200,
+            //   width: 500,
+            //   decoration: BoxDecoration(
+            //     image: DecorationImage(
+            //       image: AssetImage('Images/mai.jpeg'),
+            //       fit: BoxFit.fitWidth,
+            //     ),
+            //   ),
+            //   // child: Container(
+            //
+            //   child: ExpansionTile(
+            //     expandedAlignment: Alignment.center,
+            //     title: Text(
+            //       'Member Day',
+            //       style: TextStyle(color: Colors.white, fontSize: 18),
+            //     ),
+            //     children: [
+            //       ListTile(
+            //         title: Text(
+            //           membersDay.first,
+            //           style: TextStyle(color: Colors.white, fontSize: 18),
+            //         ),
+            //         onTap: () {},
+            //       ),
+            //     ],
+            //   ),
+            // ),
             SizedBox(
               height: 2,
             ),
             Container(
-              height: 200,
-              width: 500,
+              height: 300,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage('Images/jor.jpeg'),

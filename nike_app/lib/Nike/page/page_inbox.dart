@@ -42,12 +42,12 @@ class ListInBox extends StatelessWidget {
     return ListView(
       children: ListTile.divideTiles(context: context, tiles: [
         ListTileInbox(
-            avatar: '12.jpeg',
+            avatar: 'Images/inbox.jpeg',
             title: 'Welcome to Nike',
             subTile1: 'Your benefit start immediately',
             subTile2: '1 minute ago'),
         ListTileInbox(
-            avatar: '12.jpeg',
+            avatar: 'Images/12.jpeg',
             title: 'Welcome to the Nike App',
             subTile1:
                 "Thanks you for Joining Us a Member in the Nike App.Let's get you started",
@@ -74,9 +74,17 @@ class ListTileInbox extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       isThreeLine: true,
-      leading: CircleAvatar(
-        radius: 25,
-        backgroundImage: AssetImage(avatar),
+      leading: ConstrainedBox(
+        constraints: BoxConstraints(
+          maxHeight: 50,
+          maxWidth: 50,
+          minHeight: 50,
+          minWidth: 50,
+        ),
+        child: Image.asset(
+          avatar,
+          fit: BoxFit.fill,
+        ),
       ),
       title: Text(title),
       subtitle: Column(
